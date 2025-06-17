@@ -29,7 +29,7 @@ def init_logger():
 
         # 创建一个handler用于输出到控制台
         ch = logging.StreamHandler()
-        ch.setLevel(logging.INFO)  # 调整为INFO级别
+        ch.setLevel(logging.WARNING)  # 调整为INFO级别
 
         # 定义handler的输出格式 , 记录系统启动时间
         # 格式化输出时间，使用当前时间，并调整时区为北京时间
