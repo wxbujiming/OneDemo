@@ -4,6 +4,10 @@ on:
     branches: [ "main" ]
   pull_request:
     branches: [ "main" ]
+
+permissions: write-all
+
+
 jobs:
   build_and_push:
     runs-on: ubuntu-latest
