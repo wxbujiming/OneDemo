@@ -16,6 +16,7 @@ jobs:
       
       # 新增生成时间戳的步骤
       - name: Generate timestamp
+        id: timestamp
         run: echo "TIMESTAMP=$(date +'%Y%m%d%H%M%S')" >> $GITHUB_ENV
 
       - name: Log in to GitHub Packages
@@ -25,7 +26,7 @@ jobs:
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
       - name: Build and push Docker image
-        uses: docker/build-push-action@v5
+        uses: docker/build-push-action@v4
         with:
           context: .
           file: Dockerfile
