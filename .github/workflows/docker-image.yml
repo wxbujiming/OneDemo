@@ -30,4 +30,4 @@ jobs:
           context: .
           file: Dockerfile
           push: true
-          tags: ghcr.io/${{ github.actor }}/onedemo:${{ github.sha }}-${{ github.env.TIMESTAMP }}
+          tags: ghcr.io/${{ github.actor }}/onedemo:${{ github.env.TIMESTAMP }}-${{ github.sha }}
